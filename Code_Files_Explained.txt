@@ -1,0 +1,26 @@
+Group - MON-20
+
+IDE Used - CC Studio
+Board - CC3235SF_LAUNCHXL
+Programming Language used - C
+Dependencies - simplelink_cc32xx_sdk_6_10_00_05(Software Development Kit - Latest Version)
+
+Code Files -
+
+1) adcsinglechannel - 
+
+We used the following code files for obtaining the raw adc input values from each of the 3 sensors and callibrating them to ppm. 
+- adcsinglechannel.c - main project file
+- adcsinglechannel.sysconfig - the system configuration file to allot the ADC channels to each sensor. Its an inbuilt feature of simplelink boards.
+- README - Overview of whats there in the project
+- Other files - Dependencies
+
+
+2) httpget -
+
+We built upon this sample code to transfer the sensor data via http protocol over wifi to the blynk server. This code also has a function of adcsinglechannel to obtain the sensor values.
+- httpget.c - main project file containing the sequence for httpget protocol and also contains thread URI used for uploading the data to blynk server. It also has a separate function for collection data via 3 adc channels.
+- platform.c - File for netwrok connection via WiFi. Contains details of SSID, security type and security key.
+- httpget.sysconfig - the system configuration file to allot the ADC channels to each sensor and other hardware required for WiFi connectivity. Its an inbuilt feature of simplelink boards.
+- README - Overview of whats there in the project
+- Other files - Dependencies
